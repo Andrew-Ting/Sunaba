@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 30
+    },
+    "configurePresets": [
+        {
+            "name": "default",
+            "generator": "Visual Studio 17 2022",
+	        "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "SDL_DISABLE_UNINSTALL": "ON",
+                "SDL_OPENGL": "OFF",
+                "SDL_OPENGLES": "OFF",
+                "SDL_RENDER_D3D": "OFF",
+                "SDL_RENDER_D3D11": "OFF",
+                "SDL_RENDER_D3D12": "OFF",
+                "SDL_RENDER_METAL": "OFF",
+                "SDL_SHARED": "OFF",
+                "SDL_STATIC": "ON",
+                "SDL_TEST_LIBRARY": "OFF"
+            }
+        }
+    ]
+}

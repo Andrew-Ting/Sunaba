@@ -1,0 +1,6 @@
+build/
+.vs/
+CMakeFiles/
+CMakeCache.txt
+# IMGUI's cache for the position of UI elements used in relaunch
+imgui.ini
