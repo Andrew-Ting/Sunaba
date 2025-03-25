@@ -1,6 +1,6 @@
 # Sunaba
 
-Sunaba is a Vulkan render engine template with easy Git submodule integration to typical quality-of-life libraries ([IMGUI](https://github.com/ocornut/imgui.git), [Volk](https://github.com/zeux/volk.git), [VMA](https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator), [VkBootstrap](https://github.com/charles-lunarg/vk-bootstrap), [GLM](https://github.com/g-truc/glm.git), and [SDL 3](https://github.com/libsdl-org/SDL), and [vulkan-headers](https://github.com/KhronosGroup/Vulkan-Headers)) in a CMake build system. Without any changes, the template is an empty canvas with a single IMGUI modal printing the frame rate.
+Sunaba is a Vulkan render engine template with easy Git submodule integration to typical quality-of-life libraries ([IMGUI](https://github.com/ocornut/imgui.git), [Volk](https://github.com/zeux/volk.git), [VMA](https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator), [VkBootstrap](https://github.com/charles-lunarg/vk-bootstrap), [GLM](https://github.com/g-truc/glm.git), [SDL 3](https://github.com/libsdl-org/SDL), and [vulkan-headers](https://github.com/KhronosGroup/Vulkan-Headers)) in a CMake build system. Without any changes, the template is an empty canvas with a single IMGUI modal printing the frame rate.
 
 ## Credits and Disclaimers
 
@@ -18,7 +18,7 @@ While this is meant to be a blank slate for building render engines, for the cod
 2. PCs with GPU drivers that have Vulkan 1.3+ support
 3. Visual Studio 2022 builds
 
-It is possible to modify the code to run on other platforms/build setups, but it will need some adjustments to suit your needs.
+It is possible to modify the code to run on other platforms/build setups, but it will likely need nontrivial adjustments to suit your needs.
 
 ## Setup
 
