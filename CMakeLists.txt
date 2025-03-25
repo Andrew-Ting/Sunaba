@@ -30,7 +30,6 @@ add_subdirectory(${SDL_DIR})
 # Volk setup
 add_library(Volk STATIC ${VOLK_DIR}/volk.c)
 target_include_directories(Volk PUBLIC ${VOLK_DIR} ${VULKAN_INCLUDE_DIR})
-target_compile_definitions(Volk PRIVATE VK_KHR_win32_surface VK_USE_PLATFORM_WIN32_KHR)
 
 # VKBootstrap setup
 set (VKB_SOURCES

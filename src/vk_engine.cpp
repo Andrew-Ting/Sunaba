@@ -79,7 +79,7 @@ void VulkanEngine::run() {
 		ImGui::DockSpaceOverViewport();
 
 		if (ImGui::Begin("Statistics")) {
-			ImGui::Text("frametime %f ms", engineStatistics.frametime);
+			ImGui::Text("Frame Time: %f ms", engineStatistics.frametime);
 		}
 
 		ImGui::End();
@@ -567,7 +567,7 @@ void VulkanEngine::draw()
 }
 
 void VulkanEngine::clear_scene(VkCommandBuffer cmd, VkImage targetImage) {
-	// clear screen to black
+	// clear screen to black; you probably don't need this if you're writing to all pixels of the screen every frame
 	VkClearColorValue clearColor = { { 0.0f, 0.0f, 0.0f, 1.0f } };
 	VkImageSubresourceRange clearRange = vkinit::image_subresource_range(VK_IMAGE_ASPECT_COLOR_BIT);
 	vkCmdClearColorImage(cmd, targetImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, &clearColor, 1, &clearRange);
