@@ -22,7 +22,7 @@ It is possible to modify the code to run on other platforms/build setups, but it
 
 ## Setup
 
-I assume [Cmake](https://cmake.org/) and [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) are already installed on your device (if not, download them). There are several ways to set up a running build:
+I assume [CMake](https://cmake.org/) and [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) are already installed on your device (if not, download them). There are several ways to set up a running build:
 
 ### Quick Setup
 1. Clone this repository
