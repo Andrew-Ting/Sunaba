@@ -68,8 +68,6 @@ private:
 	void init_sync_structures();
 	void init_descriptors();
 	void init_pipelines();
-	void init_background_pipelines();
-	void init_mesh_pipeline();
 	void init_imgui();
 
 	FrameData& get_current_frame() { return mFrames[mCurrentFrameNumber]; };

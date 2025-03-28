@@ -351,12 +351,6 @@ void VulkanEngine::init_descriptors() {
 void VulkanEngine::init_pipelines() {
 }
 
-void VulkanEngine::init_background_pipelines() {
-}
-
-void VulkanEngine::init_mesh_pipeline() {
-}
-
 void VulkanEngine::init_imgui() {
 	// the IMGUI descriptor pool size is overkill, but it's copied from imgui's demos
 	VkDescriptorPoolSize pool_sizes[] = { 

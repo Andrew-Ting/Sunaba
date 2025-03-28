@@ -45,9 +45,19 @@ I assume [CMake](https://cmake.org/) and [Visual Studio 2022](https://visualstud
 2. Run the following commands at the root of this repository:
 ```
 git submodule update --init --recursive # initialize and update git submodules
-cmake . --preset default # configure the CMake build with the default Visual Studio 2022 preset
+cmake . --preset default # configure the CMake build with the default Visual Studio 2022 Cmake preset
 cmake --build ./build # build the Visual Studio solution
 ```
 3. Under the newly generated `build/` directory, open `Sunaba.sln`
 4. With Visual Studio 2022 in focus, press F5 to run a debug build
 
+## Development
+
+All newly created files should be within the `src/` folder (NOT `build/src/`) to be part of the generated executable. The generated executable can be found under `build/src/Release/Sunaba.exe` or `build/src/Debug/Sunaba.exe` after running the Cmake build commands (depending on whether you made a release build or debug build). 
+
+If you accidentally break the Visual Studio solution environment somehow, deleting the entire build folder and re-running the setup steps (minus repository cloning) will bring you back to a clean environment. All third-party dependencies are Git submodules, so updating them is literally as easy as running `git submodule update --init --recursive`.
+
+If you've gone through Victor's vkguide series, how to extend this template should be immediately apparent. If you haven't, roughly speaking:
+1. Adding to the IMGUI overlay UI should be done in the `VulkanEngine::run()` function
+2. Extending the render loop inside the render window should be done in the `VulkanEngine::draw()` function
+3. Initializing any bindings (i.e. descriptors and pipelines) should be done in the `VulkanEngine::init_descriptors()` and `VulkanEngine::init_pipelines()` functions.
