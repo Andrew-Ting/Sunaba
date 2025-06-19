@@ -76,7 +76,7 @@ void VulkanEngine::run() {
 		ImGui_ImplSDL3_NewFrame();
 		ImGui::NewFrame();
 		// Make this frame a dockspace (i.e. anchorable around the render window)
-		ImGui::DockSpaceOverViewport();
+		ImGui::DockSpaceOverViewport(0, 0, ImGuiDockNodeFlags_PassthruCentralNode);
 
 		if (ImGui::Begin("Statistics")) {
 			ImGui::Text("Frame Time: %f ms", engineStatistics.frametime);
