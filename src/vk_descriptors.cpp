@@ -43,8 +43,8 @@ VkDescriptorPool DescriptorAllocatorGrowable::get_descriptor_allocation_pool(VkD
 VkDescriptorPool DescriptorAllocatorGrowable::create_pool(VkDevice device, uint32_t setCount, std::span<PoolSizeRatio> poolRatios)
 {
     std::vector<VkDescriptorPoolSize> poolSizes;
-    // conservative; we assume on the worst case each allocated descriptor set only contains one descriptor, in which case set count = # of descriptors
-    // if you can guarantee your descriptor sets have > 1 descriptor, you can lower maxSets and be more memory optimized; this is not implemented here
+    // conservative; we assume on the worst case each allocated descriptor set contains all the specified ratio of descriptors, in which case set count * sum of ratios = # of descriptors
+    // if you have a tighter bound on total number of descriptors allocated, you can use it to allocate less descriptors in the pool and be more memory optimized; this is not implemented here
     for (PoolSizeRatio ratio : poolRatios) {
         poolSizes.push_back(VkDescriptorPoolSize{
             .type = ratio.type,
